@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <JsonTemplateLayout eventTemplateUri="classpath:MyLayout.json"/>
+        </Console>
+        <Console name="DEFAULT_CONSOLE" target="SYSTEM_OUT">
+            <JsonTemplateLayout />
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="com.example" level="INFO" additivity="false">
+            <AppenderRef ref="CONSOLE" />
+        </Logger>
+        <Root level="WARN">
+            <AppenderRef ref="DEFAULT_CONSOLE"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
